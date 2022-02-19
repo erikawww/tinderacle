@@ -9,7 +9,7 @@ let cartas = [
         id: 2,
         img: "../img/papisa-tarot.png",
         nombre: "La Suma Sacerdotisa",
-        txt: "Se asocia con el cosmos, como pareja de dos universos gemelos, y con la carga eléctrica. Ella se encuentra en la antesala del Templo, que a un lado tiene una columna blanca (el universo material) y al otro una de color negro (el universo antimaterial).",
+        txt: "Se asocia con el cosmos, como pareja de dos universos gemelos, y con la carga eléctrica. Ella se encuentra en la antesala del Templo, que a un lado tiene una columna blanca y al otro lado negra.",
     },
     {
         id: 3,

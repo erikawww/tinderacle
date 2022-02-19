@@ -21,6 +21,7 @@ header{
 }
 /* 1ra pantalla */
 #principio{
+    /* display: none; */
     display: flex;
     flex-direction: column;
 }
@@ -75,6 +76,7 @@ label{
     border-radius: 4px;
     color:inherit;
     background-color: #9505ED;
+    font-weight: 500;
 }
 
 
@@ -113,7 +115,7 @@ label{
 
 /* 3ra pantalla */
 #cartasCar{
-    width: 100vw;
+    /* width: 100vw; */
     display: none;
     flex-direction: column;
     justify-content: center;
@@ -193,14 +195,6 @@ label{
     height: 18px;
     width: 18px;
 }
-/* 4ta pantalla */
-#resultado{
-    display: none;
-}
-
-
-
-
 /*********
 ** modal *
 **********/
@@ -230,6 +224,7 @@ label{
     background-color: #E84578;
     height: 40px;
     border-radius: 4px;
+    font-weight: 500;
 }
 .btnVolver{
     color:#fefefe;
@@ -237,7 +232,70 @@ label{
     background-color: #9505ED;
     height: 40px;
     border-radius: 4px;
+    font-weight: 500;
 }
 .modal-backdrop.show {
     display:none;
 }
+
+/* 4ta pantalla */
+#resultado{
+    display: none;
+    color:#fefefe;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.listasRes{
+    margin-top:25px;
+}
+.cartasMini{
+    padding-left: 0;
+    display: flex;
+    width: 100vw;
+    justify-content: space-evenly;
+}
+.cartasMini-item{
+    list-style: none;
+}
+.cartasMini-img{
+    height:120px;
+    clip-path: circle(35%);
+}
+.titulo-player{
+    text-transform: capitalize;
+    text-align: center;
+}
+.matches{
+    margin-top:50px;
+    text-align: center;
+}
+.matches p{
+    font-size: 88px;
+    color: #E84578;
+}
+.resActions{
+    margin-top:45px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.btn-guardar{
+    width:140px;
+    height:40px;
+    border: none;
+    border-radius: 4px;
+    background-color: #E84578;
+    color:#fefefe;
+    font-weight: 500;
+}
+.btn-salir{
+    width:140px;
+    height:40px;
+    border: none;
+    border-radius: 4px;
+    background-color: #9505ED;
+    color:#fefefe;
+    font-weight: 500;
+}
+
