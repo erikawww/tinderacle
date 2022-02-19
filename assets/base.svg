@@ -1,0 +1,34 @@
+<svg width="157" height="179" viewBox="0 0 157 179" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M131.323 136.912C117.409 149.459 98.9816 157.097 78.7705 157.097C58.5594 157.097 40.1323 149.459 26.2183 136.912L10.2617 164.55C8.33724 167.883 10.7429 172.05 14.5919 172.05H142.949C146.798 172.05 149.204 167.883 147.279 164.55L131.323 136.912Z" fill="url(#paint0_linear_7_221)"/>
+<g filter="url(#filter0_f_7_221)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M124.981 144.948C122.292 146.891 119.476 148.668 116.547 150.264L121.471 158.831C123.387 162.165 120.98 166.323 117.136 166.323H40.9643C37.1197 166.323 34.7136 162.165 36.6293 158.831L41.5533 150.264C38.624 148.668 35.8077 146.891 33.1194 144.948L22.6811 163.028C20.7566 166.361 23.1622 170.528 27.0112 170.528H131.089C134.938 170.528 137.344 166.361 135.419 163.028L124.981 144.948Z" fill="url(#paint1_linear_7_221)"/>
+</g>
+<g filter="url(#filter1_f_7_221)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M114.741 151.49C103.6 157.559 90.8248 161.008 77.2444 161.008C63.6641 161.008 50.8892 157.559 39.7477 151.49L34.8237 160.058C32.908 163.391 35.3141 167.549 39.1587 167.549H115.33C119.175 167.549 121.581 163.391 119.665 160.058L114.741 151.49Z" fill="url(#paint2_linear_7_221)"/>
+</g>
+<circle cx="78.5" cy="78.9716" r="78.5" fill="#7313C1"/>
+<defs>
+<filter id="filter0_f_7_221" x="14.0037" y="136.948" width="130.093" height="41.5797" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="4" result="effect1_foregroundBlur_7_221"/>
+</filter>
+<filter id="filter1_f_7_221" x="26.1513" y="143.49" width="102.186" height="32.0592" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="4" result="effect1_foregroundBlur_7_221"/>
+</filter>
+<linearGradient id="paint0_linear_7_221" x1="24.2892" y1="148.219" x2="124.426" y2="166.321" gradientUnits="userSpaceOnUse">
+<stop offset="0.243435" stop-color="#764204"/>
+<stop offset="1" stop-color="#C67413"/>
+</linearGradient>
+<linearGradient id="paint1_linear_7_221" x1="33.6822" y1="150.67" x2="117.073" y2="165.733" gradientUnits="userSpaceOnUse">
+<stop offset="0.243435" stop-color="#764204"/>
+<stop offset="1" stop-color="#C67413"/>
+</linearGradient>
+<linearGradient id="paint2_linear_7_221" x1="42.3664" y1="152.192" x2="106.499" y2="163.709" gradientUnits="userSpaceOnUse">
+<stop offset="0.243435" stop-color="#764204"/>
+<stop offset="1" stop-color="#C67413"/>
+</linearGradient>
+</defs>
+</svg>
