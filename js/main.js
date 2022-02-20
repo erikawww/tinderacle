@@ -12,31 +12,44 @@ let inputs = document.querySelectorAll('.input')
 let carousel = document.querySelector('.carro')
 let contCartas = document.querySelector('.carousel-inner')
 let listasRes = document.querySelector('.listasRes')
+
 let matches = document.querySelector('.matches')
+
 let lista1 = document.querySelector('.lista1')
 let lista2 = document.querySelector('.lista2')
+
+let juegosAnt = document.querySelector('.juegos-ant')
 // modal
 let modal = document.querySelector('.modal')
 let carouselMjs = document.querySelector('#carouselMsj')
 // botones
 let jugar = document.querySelector('#jugar')
+
 let btnVolver = document.querySelector('.btnVolver')
 let btnResultados = document.querySelector('.btnResultados')
+
+let btnGuardar = document.querySelector('.btn-guardar')
+let btnSalir = document.querySelector('.btn-salir')
+
 // otras variables
 let lista1_titulo = document.querySelector('.lista1 h2')
 let lista1_listado = document.querySelector('.lista1 ul')
 let lista2_titulo = document.querySelector('.lista2 h2')
 let lista2_listado = document.querySelector('.lista2 ul')
+
 let matches_titulo = document.querySelector('.matches p')
+
+let juegosList = document.querySelector('.juegos-ant-list')
+
 let header = document.querySelector('header')
 
 let player1 = ''
 let player2 = ''
-// resultados es tempMazo
 let resultados = []
 // partidas es random
 let partidas = 0
-
+let position = 0
+let partidasTotales = []
 
 
 // llamar juego
@@ -45,6 +58,7 @@ jugar.addEventListener('click', (e)=>{
     player1 = document.getElementById('playerUno').value
     player2 = document.getElementById('playerDos').value
     form.reset()
+    resetResultados()
         // validar value inputs
         if(player1 != "" && player2 != ""){
             iniciarJuego()
@@ -74,8 +88,12 @@ let generarRandom =(min, max)=>{
 }
 
 // ver resultados
-let verResultados = ()=>{ 
-    let suma = 0
+let verResultados = (pos)=>{ 
+    let suma = 0        
+    if(pos){
+        resultados = partidasTotales[pos]
+    }
+
     resultados.forEach((carta, index)=>{
         if(index < 3){
             lista1_listado.innerHTML += `<li class="cartasMini-item"><img class="cartasMini-img" src="${carta.img}"></li>`
@@ -83,7 +101,7 @@ let verResultados = ()=>{
         if(index >= 3 && index < 6){
             lista2_listado.innerHTML += `<li class="cartasMini-item"><img class="cartasMini-img" src="${carta.img}"></li>`
         }
-        suma = suma + carta.id
+        suma = suma + carta.value
     })
     if (suma % 2 == 0){
         console.log('hay match')
@@ -163,5 +181,46 @@ btnVolver.addEventListener('click', (e) => {
 // Ir a pantallas matches
 btnResultados.addEventListener('click', () => {
     verResultados()
+    btnGuardar.style.display="block"
     siguientePantalla(resultado)
+})
+
+let resetResultados = () => {
+    lista1_listado.innerHTML = ""
+    lista2_listado.innerHTML = ""
+    resultados = []
+    
+}
+
+
+juegosList.addEventListener('click', (e)=>{
+    if(e.target.getAttribute('data-position')){
+        let pos = e.target.getAttribute('data-position')
+        player1 = e.target.getAttribute('data-player-one')
+        player2 = e.target.getAttribute('data-player-two')
+        resetResultados()
+        verResultados(pos)
+        siguientePantalla(resultado)
+        btnGuardar.style.display="none"
+        header.style.display="none"
+    }
+})
+
+
+let guardarPartida = (player1, player2) =>{
+    partidasTotales.push(resultados)
+    // resetResultados()
+    juegosList.innerHTML += `<div class="contList"><li data-position="${position++}" data-player-one="${player1}" data-player-two="${player2}">${player1} & ${player2}</li><button><img src="../assets/arrow-right.svg" alt="ver partida"></button></div>`
+}
+
+btnGuardar.addEventListener('click', ()=>{
+    guardarPartida(player1, player2)
+    header.style.display="block"
+    juegosAnt .style.display="flex"
+    siguientePantalla(principio)
+    resetResultados()
+})
+btnSalir.addEventListener('click', ()=>{
+    header.style.display="block"
+    siguientePantalla(principio)
 })

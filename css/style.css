@@ -14,10 +14,13 @@ body{
 * header*
 ******* */
 header{
-    margin-top: 30px;
+    margin-top: 25px;
 }
 .logo{
     text-align: center;
+}
+.logo img{
+    height: 50px;
 }
 /* 1ra pantalla */
 #principio{
@@ -66,7 +69,7 @@ label{
     text-transform: capitalize;
 }
 .incorrecto{
-    border: 1px solid rgb(255, 255, 0);
+    border: 1px solid #B8A42F;
 }
 #jugar{
     margin-top: 30px;
@@ -146,18 +149,16 @@ label{
     align-items: center;
 }
 .item img{
-    width: 193px;
+    width: 225px;
     margin:20px;
 }
 .item h3{
     margin-bottom: 20px;
 }
 .item p{
-    /* width: 311px; */
-    width: 282px;
+    width:271px;
     height: 156px;
     text-align: justify;
-    /* overflow: scroll; */
     font-size: 14px;
 }
 /* carousel */
@@ -178,7 +179,7 @@ label{
     background-color:#E84578;
 }
 .carousel-indicators {
-    margin: 56px;
+    margin: 30px;
     justify-content: space-around;
 }
 .btnClose{
@@ -299,3 +300,54 @@ label{
     font-weight: 500;
 }
 
+/* juegos anteriores */
+.juegos-ant{
+    display: none;
+    margin-top: 30px;
+    color: #fefefe;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+}
+.juegos-ant h2{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.juegos-ant-list{
+    padding-left: 0;
+    width: 100%;
+    height: 110px;
+    /* height: auto; */
+    overflow: scroll;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.contList{
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #fefefe;
+}
+.juegos-ant-list .contList li{
+    list-style: none;
+    padding:10px;
+    width: 100%;
+}
+.juegos-ant-list .contList button{
+    background-color: transparent;
+    border: none;
+    color: #fefefe;
+}
+.juegos-ant-list .contList button img{
+    height: 18px;
+}
+/* .verPartida{
+    pointer-events: none;
+} */
