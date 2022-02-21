@@ -31,6 +31,8 @@ let btnResultados = document.querySelector('.btnResultados')
 let btnGuardar = document.querySelector('.btn-guardar')
 let btnSalir = document.querySelector('.btn-salir')
 
+let closeModal = document.querySelector('.btn-close-modal')
+
 // otras variables
 let lista1_titulo = document.querySelector('.lista1 h2')
 let lista1_listado = document.querySelector('.lista1 ul')
@@ -170,7 +172,7 @@ carousel.addEventListener('slid.bs.carousel', (e)=>{
             modal.style.display="block"
             modal.classList.add('show')
         }
-    }, 1500);
+    }, 1000);
 })
 // Volver a pantalla principio
 btnVolver.addEventListener('click', (e) => {
@@ -183,6 +185,7 @@ btnResultados.addEventListener('click', () => {
     verResultados()
     btnGuardar.style.display="block"
     siguientePantalla(resultado)
+
 })
 
 let resetResultados = () => {
@@ -199,10 +202,14 @@ juegosList.addEventListener('click', (e)=>{
         player1 = e.target.getAttribute('data-player-one')
         player2 = e.target.getAttribute('data-player-two')
         resetResultados()
-        verResultados(pos)
-        siguientePantalla(resultado)
         btnGuardar.style.display="none"
         header.style.display="none"
+        verResultados(pos)
+        // volver a pantalla resultados
+        siguientePantalla(resultado)
+
+        // volver a pantalla carousel
+        // siguientePantalla(cartasCar)
     }
 })
 
@@ -223,4 +230,9 @@ btnGuardar.addEventListener('click', ()=>{
 btnSalir.addEventListener('click', ()=>{
     header.style.display="block"
     siguientePantalla(principio)
+})
+
+closeModal.addEventListener('click', ()=>{
+    modal.style.display="none"
+    modal.classList.remove('show')
 })

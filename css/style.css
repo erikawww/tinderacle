@@ -149,7 +149,7 @@ label{
     align-items: center;
 }
 .item img{
-    width: 225px;
+    width: 248px;
     margin:20px;
 }
 .item h3{
@@ -199,12 +199,27 @@ label{
 /*********
 ** modal *
 **********/
+@media (min-width: 576px){
+    .modal-dialog {
+        max-width: 353px;
+        margin: 1.75rem auto;
+    }
+}
 .modal-content{
     height: 50vh;
     background-color: #232526;
 }
-.btn-close{
+.btn-close-modal{
     color:#fefefe;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 13px;
+    margin-right: 13px;
+}
+.btn-close-modal img{
+    height: 20px;
 }
 .modal-body{
     padding:30px;
@@ -249,11 +264,12 @@ label{
 }
 .listasRes{
     margin-top:25px;
+    width: 100%;
 }
 .cartasMini{
     padding-left: 0;
     display: flex;
-    width: 100vw;
+    width: 100%;
     justify-content: space-evenly;
 }
 .cartasMini-item{
@@ -308,7 +324,6 @@ label{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: scroll;
 }
 .juegos-ant h2{
     font-size: 18px;
@@ -319,13 +334,10 @@ label{
 .juegos-ant-list{
     padding-left: 0;
     width: 100%;
-    height: 110px;
-    /* height: auto; */
-    overflow: scroll;
-
+    height: 150px;
+    overflow-y: scroll;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
 }
 .contList{
@@ -337,6 +349,7 @@ label{
 }
 .juegos-ant-list .contList li{
     list-style: none;
+    text-transform: capitalize;
     padding:10px;
     width: 100%;
 }
@@ -344,6 +357,7 @@ label{
     background-color: transparent;
     border: none;
     color: #fefefe;
+    cursor: auto;
 }
 .juegos-ant-list .contList button img{
     height: 18px;
